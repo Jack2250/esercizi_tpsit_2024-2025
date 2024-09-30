@@ -5,6 +5,8 @@ L’algoritmo deve stampare la somma calcolata. L’algoritmo deve terminare
 con un messaggio di errore quando viene inserito un numero che non
 permette di effettuare il calcolo (nel dominio dei numeri reali).*/
 
+//Autore: Redi Giacomo
+//Data: 1/10/2024
 
 #include <stdio.h>
 #include <math.h>
