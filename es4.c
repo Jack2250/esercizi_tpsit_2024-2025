@@ -8,7 +8,7 @@ crescente i numeri pari minori o uguali a N.
 
 int main(int argc, char *argv[])
 {
-    int N,num=2;
+    int N,num=0;
     
     do{
         printf("Inserisci un numero intero positivo\n");
