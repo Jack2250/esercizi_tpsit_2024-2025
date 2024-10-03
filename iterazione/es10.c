@@ -8,7 +8,7 @@ primi N numeri interi.
 
 int main(int argc,char *argv[])
 {
-    int N,somma = 0,i;
+    int N,somma = 0;
     
     do{
         printf("Inserisci un numero intero positivo\n");
