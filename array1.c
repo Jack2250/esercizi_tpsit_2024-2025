@@ -9,7 +9,7 @@ contenuto.
 int main(int argc, char *argv [])
 {
     int lunghezza = 4;
-    int array [4];
+    int array [lunghezza];
     
     for(int i = 0; i<lunghezza;i++){
         printf("Inserisci un numero\n");
