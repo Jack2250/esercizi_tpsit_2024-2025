@@ -46,7 +46,7 @@ int main(int argc, char *argv [])
         printf("*   *\n");
         printf("*****\n");
     }else{
-        printf("Il numero è diverso da 3 e 5");
+        printf("Il numero deve essere 3 o 5");
     }
 
     return 0;
