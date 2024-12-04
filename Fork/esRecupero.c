@@ -20,7 +20,6 @@ int main(int argc, char *argv[])
     if (p1 > 0) 
     {
         printf("Io sono il padre A: PID = %d\n", getpid());
-
     }
     else if (p1 == 0) 
     {
