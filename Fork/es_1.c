@@ -1,3 +1,7 @@
+/*Si scriva un programma in C che legge in input da argv[1] un carattere, quindi istanzi un processo figlio
+il quale deve convertire il carattere in maiuscolo e terminare. Il padre attende la terminazione del processo figlio. 
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
