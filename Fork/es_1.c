@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
     int p1;
 
     if (argc != 2) {
-        printf("Numero di elementi errato\n");
+        printf("Numero di argomenti errato\n");
         exit(0);
     }
 
