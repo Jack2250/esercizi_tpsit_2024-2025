@@ -57,7 +57,7 @@ int main() {
         if (p6 == 0) {
             printf("P6: mio PID=%d, mio padre P3 ha PID=%d\n", getpid(), getppid());
             int somma = array[0] + array[1] + array[2];
-            printf("P6: la somma delle componenti del vettore V[] = %d\n", somma);
+            printf("P6: la somma delle componenti del vettore = %d\n", somma);
             exit(somma);
         }
 
