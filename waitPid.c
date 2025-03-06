@@ -38,7 +38,7 @@ int main() {
     
     f1 = fork();
     if (f1 < 0) {
-        perror("Errore generazione processo F1");
+        printf("Errore generazione processo F1");
         exit(1);
     }
     
@@ -52,7 +52,7 @@ int main() {
     
     f2 = fork();
     if (f2 < 0) {
-        perror("Errore generazione processo F2");
+        printf("Errore generazione processo F2");
         exit(1);
     }
     
