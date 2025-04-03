@@ -24,4 +24,7 @@ int main()
         }
     }
     fclose(puntaFile);
+    printf("Totale righe: %d Totale caratteri: %d",nr,nc);
+
+    return 0;
 }
