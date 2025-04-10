@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 {
     FILE *fileInput, *fileOutput;
     char inputFileName[100], outputFileName[100];
-    int ch;
+    char ch;
 
     printf("Inserisci il nome del file di input: ");
     scanf("%s", inputFileName);
