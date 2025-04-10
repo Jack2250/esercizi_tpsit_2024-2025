@@ -1,6 +1,5 @@
 /*
-Scrivi il
-codice sorgente di un prg che
+Scrivi il codice sorgente di un prg che
 Copia, carattere per carattere, il contenuto di un file già esistente
 In un secondo file da creare.
 I nomi dei file devono essere forniti in input dall’utente da tastiera
