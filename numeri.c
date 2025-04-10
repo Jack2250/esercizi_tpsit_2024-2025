@@ -1,52 +1,39 @@
+/*Leggi il file numeri.txt già esistente, composto da una sequenza di numeridi una cifra separati da uno spazio.
+Scrivi due file, pari.txt e dispari.txt 
+nei quali inserisci, rispettivamente, i numeri letti a seconda del loro valore pari o dispari.*/
+
 #include <stdio.h>
-#include <stdlib.h>
 
-int main()
-{
-    FILE *inputFile, *pariFile, *dispariFile;
-    int numero;
+int main() {
+    FILE *fileInput, *filePari, *fileDispari;
+    int ch;
 
-    inputFile = fopen("numeri.txt", "r");
-    if (inputFile == NULL)
-    {
-        printf("Errore nell'aprire il file numeri.txt\n");
+    fileInput = fopen("numeri.txt", "r");
+    filePari = fopen("pari.txt", "w");
+    fileDispari = fopen("dispari.txt", "w");
+
+    if (fileInput == NULL || filePari == NULL || fileDispari == NULL) {
+        printf("Errore nell'apertura di un file");
         return 1;
     }
 
-    pariFile = fopen("pari.txt", "w");
-    if (pariFile == NULL)
-    {
-        printf("Errore nell'aprire il file pari.txt\n");
-        fclose(inputFile);
-        return 1;
-    }
-
-    dispariFile = fopen("dispari.txt", "w");
-    if (dispariFile == NULL)
-    {
-        printf("Errore nell'aprire il file dispari.txt\n");
-        fclose(inputFile);
-        fclose(pariFile);
-        return 1;
-    }
-
-    // Leggo i numeri dal file e li divido tra pari e dispari
-    while (fscanf(inputFile, "%d", &numero) != EOF)
-    {
-        if (numero % 2 == 0)
-        {
-            fprintf(pariFile, "%d ", numero);
-        }
-        else
-        {
-            fprintf(dispariFile, "%d ", numero);
+    while ((ch = fgetc(fileInput)) != EOF) {
+        if (ch >= '0' && ch <= '9') { // se è una cifra
+            int num = ch - '0'; //Converte una cifra scritta come carattere nel suo valore numerico.
+            if (num % 2 == 0) {
+                fputc(ch, filePari);
+                fputc(' ', filePari); // spazio dopo il numero
+            } else {
+                fputc(ch, fileDispari);
+                fputc(' ', fileDispari);
+            }
         }
     }
 
-    fclose(inputFile);
-    fclose(pariFile);
-    fclose(dispariFile);
+    fclose(fileInput);
+    fclose(filePari);
+    fclose(fileDispari);
 
-    printf("Operazione completata!\n");
+    printf("Numeri separati correttamente.\n");
     return 0;
 }
